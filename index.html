@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shailove Singh | Generative & Agentic AI Architect</title>
+    <meta name="description"
+        content="Professional portfolio of Shailove Singh, Generative and Agentic AI Developer. Dynamic AI workflows, RAG systems, and multi-agent orchestration.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&family=Orbitron:wght@500;700;900&family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- CSS Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Soft Dreamscape Particles Background Canvas -->
+    <canvas id="dreamscapeCanvas"></canvas>
+
+    <!-- HEADER NAVIGATION BAR -->
+    <header class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo">
+                <span class="logo-accent">✦</span> SHAILOVE SINGH
+            </a>
+
+            <!-- Mobile Toggle -->
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Navigation Menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <nav class="nav-menu" id="navMenu">
+                <a href="#about" class="nav-link">About</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#experience" class="nav-link">Experience</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- HERO / LANDING SECTION -->
+    <section class="hero-section" id="hero">
+        <video class="hero-bg-video" autoplay loop muted playsinline poster="anime_background.png">
+            <source src="Create_a_smooth_cinematic_anim.mp4" type="video/mp4">
+        </video>
+        <div class="hero-bg-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-title" data-text="BUILDING BEYOND ORDINARY">BUILDING BEYOND ORDINARY</h1>
+            <p class="hero-subtitle">Generative & Agentic AI Specialist</p>
+            <p class="hero-tagline">Architecting intelligent multi-agent systems and production-grade LLM workflows.</p>
+            <a href="#projects" class="hero-cta-btn">
+                <span class="btn-glow-layer"></span>
+                <span class="btn-label-text">Explore Showcase <i class="fa-solid fa-arrow-down"></i></span>
+            </a>
+        </div>
+        <div class="scroll-indicator">
+            <span class="mouse-icon"><span class="mouse-wheel"></span></span>
+            <span class="scroll-text">SCROLL TO ORCHESTRATE</span>
+        </div>
+    </section>
+
+    <!-- MAIN WRAPPER FOR SCROLL SECTIONS -->
+    <div class="content-wrapper">
+
+        <!-- ABOUT SECTION -->
+        <section class="scroll-section" id="about">
+            <div class="section-container">
+                <div class="section-header-wrap">
+                    <h2 class="section-heading"><span class="accent-mark">✦</span> Professional Profile</h2>
+                    <div class="section-line"></div>
+                </div>
+
+                <div class="about-grid">
+                    <!-- Profile Card -->
+                    <div class="about-card-left">
+                        <div class="portrait-container">
+                            <video src="86535a482a542fffb52d4e0e9c5e03f0_720w.mp4" class="profile-portrait" autoplay
+                                loop muted playsinline></video>
+                            <div class="portrait-glow"></div>
+                        </div>
+                        <div class="quick-details">
+                            <div class="detail-item">
+                                <span class="detail-lbl">Clearance</span>
+                                <span class="detail-val highlight">AI Systems Architect</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-lbl">Academic</span>
+                                <span class="detail-val">BSc, SDS University</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Profile Bio -->
+                    <div class="about-card-right">
+                        <h3 class="bio-subtitle">> Core AI Directive</h3>
+                        <p class="bio-text">
+                            Experienced Generative and Agentic AI developer skilled in building intelligent LLM-powered
+                            systems, multi-agent workflows, and autonomous AI solutions. I bridge the gap between
+                            foundation models and scalable business pipelines by designing secure, deterministic
+                            orchestrators.
+                        </p>
+
+                        <div class="hud-divider"></div>
+
+                        <div class="contact-card-grid">
+                            <div class="contact-card-item">
+                                <i class="fa-solid fa-envelope contact-item-icon"></i>
+                                <div class="contact-item-info">
+                                    <span class="item-lbl">Communications</span>
+                                    <span class="item-val">shailovesingh787@gmail.com</span>
+                                </div>
+                            </div>
+                            <div class="contact-card-item">
+                                <i class="fa-solid fa-phone contact-item-icon"></i>
+                                <div class="contact-item-info">
+                                    <span class="item-lbl">Direct Uplink</span>
+                                    <span class="item-val">+91 6264381091</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="about-socials">
+                            <a href="https://www.linkedin.com/in/shailove-singh-04babb206" target="_blank"
+                                class="social-btn">
+                                <i class="fa-brands fa-linkedin-in"></i> LinkedIn Profile
+                            </a>
+                            <a href="https://github.com/shailovesingh" target="_blank" class="social-btn">
+                                <i class="fa-brands fa-github"></i> GitHub Repositories
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SKILLS SECTION -->
+        <section class="scroll-section" id="skills">
+            <div class="section-container">
+                <div class="section-header-wrap">
+                    <h2 class="section-heading"><span class="accent-mark">✦</span> Technical Expertise</h2>
+                    <div class="section-line"></div>
+                </div>
+
+                <div class="skills-grid">
+
+                    <!-- Skill Column 1: Gen AI -->
+                    <div class="skill-category-card">
+                        <div class="category-header">
+                            <i class="fa-solid fa-wand-magic-sparkles category-icon"></i>
+                            <h3>Generative AI & Agentic Orchestration</h3>
+                        </div>
+                        <div class="skill-tags-group">
+                            <span class="skill-chip">LangChain</span>
+                            <span class="skill-chip">LangGraph</span>
+                            <span class="skill-chip">Microsoft AutoGen</span>
+                            <span class="skill-chip">CrewAI</span>
+                            <span class="skill-chip">OpenAI Agents SDK</span>
+                            <span class="skill-chip">Prompt Engineering</span>
+                            <span class="skill-chip">Fine-Tuning</span>
+                            <span class="skill-chip">RAG Systems</span>
+                            <span class="skill-chip">Vector Embeddings</span>
+                            <span class="skill-chip">Semantic Search</span>
+                            <span class="skill-chip">Multi-Agent Systems</span>
+                            <span class="skill-chip">n8n Automation</span>
+                            <span class="skill-chip">Orchestrated Workflows</span>
+                            <span class="skill-chip">API & Data Automation</span>
+                        </div>
+                    </div>
+
+                    <!-- Skill Column 2: Programming & ML -->
+                    <div class="skill-category-card">
+                        <div class="category-header">
+                            <i class="fa-solid fa-code category-icon"></i>
+                            <h3>Programming & Machine Learning</h3>
+                        </div>
+                        <div class="skill-tags-group">
+                            <span class="skill-chip">Python</span>
+                            <span class="skill-chip">TensorFlow</span>
+                            <span class="skill-chip">PyTorch</span>
+                            <span class="skill-chip">Flask</span>
+                            <span class="skill-chip">MLflow</span>
+                            <span class="skill-chip">DVC</span>
+                            <span class="skill-chip">DagsHub</span>
+                        </div>
+                    </div>
+
+                    <!-- Skill Column 3: Cloud & Databases -->
+                    <div class="skill-category-card">
+                        <div class="category-header">
+                            <i class="fa-solid fa-server category-icon"></i>
+                            <h3>Cloud Platforms, DBs & DevOps</h3>
+                        </div>
+                        <div class="skill-tags-group">
+                            <span class="skill-chip">AWS (SageMaker, Lambda)</span>
+                            <span class="skill-chip">Azure ML</span>
+                            <span class="skill-chip">GCP</span>
+                            <span class="skill-chip">FAISS</span>
+                            <span class="skill-chip">Pinecone</span>
+                            <span class="skill-chip">Relational Databases</span>
+                            <span class="skill-chip">Dynamics 365</span>
+                            <span class="skill-chip">GitHub Actions</span>
+                            <span class="skill-chip">Git</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- EXPERIENCE SECTION -->
+        <section class="scroll-section" id="experience">
+            <div class="section-container">
+                <div class="section-header-wrap">
+                    <h2 class="section-heading"><span class="accent-mark">✦</span> Professional History</h2>
+                    <div class="section-line"></div>
+                </div>
+
+                <div class="experience-timeline">
+
+                    <!-- Exp 1 -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <h3 class="role-title">Data Scientist</h3>
+                                <span class="date-badge">Oct 2024 - Jan 2026</span>
+                            </div>
+                            <h4 class="company-name">Qonaq Health and Wellness <span class="location-txt">| New
+                                    Delhi</span></h4>
+                            <ul class="timeline-bullets">
+                                <li>Engineered an LLM-driven recommendation engine using patient medical charts and
+                                    clinical rulesets to produce personalized medical-tourism care itineraries.</li>
+                                <li>Leveraged language models to translate, parse, and summarize patient files,
+                                    enhancing cross-border clinical workflow execution.</li>
+                                <li>Mapped trends in recovery timelines using demographics and post-op care logs to
+                                    refine therapeutic recommendation algorithms.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Exp 2 -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <h3 class="role-title">Prompt Engineer</h3>
+                                <span class="date-badge">Jan 2025 - Mar 2025</span>
+                            </div>
+                            <h4 class="company-name">Soul AI <span class="location-txt">| Freelance</span></h4>
+                            <ul class="timeline-bullets">
+                                <li>Formulated and validated structured instructions for core LLMs, improving prompt
+                                    factual accuracy, reasoning, and context adaptation.</li>
+                                <li>Supervised dataset validation routines, tuning response parameters to prevent system
+                                    drift and hallucination.</li>
+                                <li>Constructed template prompt sets for code compilation, text parsing, and domain QA
+                                    pipelines.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Exp 3 -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <h3 class="role-title">Data Scientist</h3>
+                                <span class="date-badge">Jan 2024 - Oct 2024</span>
+                            </div>
+                            <h4 class="company-name">Fill Design Group <span class="location-txt">| Kolkata, WB</span>
+                            </h4>
+                            <ul class="timeline-bullets">
+                                <li>Developed a conversational agent for **Dakshita’s Kitchen** in real-time,
+                                    simplifying food restocking, inventory cataloging, and recipe curation.</li>
+                                <li>Created an adaptive inventory replacement engine by analyzing historic sales loops,
+                                    lowering material waste margins by 18%.</li>
+                                <li>Deployed LLM marketing copy pipelines and programmatic ad-bidding optimizations for
+                                    retail clients in the United States.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Exp 4 -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <h3 class="role-title">Data Analyst</h3>
+                                <span class="date-badge">Mar 2023 - Jan 2024</span>
+                            </div>
+                            <h4 class="company-name">Contechub <span class="location-txt">| Jaipur, RJ</span></h4>
+                            <ul class="timeline-bullets">
+                                <li>Synthesized analytics dashboards covering ad campaigns, web visitor trends, and
+                                    conversions.</li>
+                                <li>Isolated underperforming bottlenecks in client customer Acquisition cycles,
+                                    increasing performance ROI by 12%.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Exp 5 -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <h3 class="role-title">Apprentice</h3>
+                                <span class="date-badge">Oct 2022 - Mar 2023</span>
+                            </div>
+                            <h4 class="company-name">GE Aerospace <span class="location-txt">| Pune, MH</span></h4>
+                            <ul class="timeline-bullets">
+                                <li>Traced turboprop and engine asset lifecycles across Material Review Board tracks
+                                    using Oracle enterprise resources.</li>
+                                <li>Evaluated raw scrap stats, recommending structural shop floor changes that reduced
+                                    metal machining waste.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- PROJECTS SECTION -->
+        <section class="scroll-section" id="projects">
+            <div class="section-container">
+                <div class="section-header-wrap">
+                    <h2 class="section-heading"><span class="accent-mark">✦</span> Project Showcase</h2>
+                    <div class="section-line"></div>
+                </div>
+
+
+                <!-- Projects Cards Grid -->
+                <div class="projects-grid">
+
+                    <div class="project-card">
+                        <div class="card-inner">
+                            <div class="p-header">
+                                <i class="fa-solid fa-robot p-icon"></i>
+                                <h4>Agentic Chatbot</h4>
+                            </div>
+                            <p class="p-desc">Built a Python chatbot utilizing multi-agent orchestration frameworks,
+                                tool/function calling logic, and hybrid RAG data fetching.</p>
+                            <div class="p-tags"><span class="t-tag">Python</span><span
+                                    class="t-tag">LangGraph</span><span class="t-tag">RAG</span></div>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="card-inner">
+                            <div class="p-header">
+                                <i class="fa-solid fa-database p-icon"></i>
+                                <h4>QueryGPT</h4>
+                            </div>
+                            <p class="p-desc">A natural language to SQL extraction platform enabling non-technical users
+                                to query database engines via LangGraph multi-agent systems.</p>
+                            <div class="p-tags"><span class="t-tag">Groq API</span><span class="t-tag">SQL</span><span
+                                    class="t-tag">LangGraph</span></div>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="card-inner">
+                            <div class="p-header">
+                                <i class="fa-solid fa-sliders p-icon"></i>
+                                <h4>Shailove AI</h4>
+                            </div>
+                            <p class="p-desc">An all-in-one multimodal assistant integrating RAG Chat, image synthesis,
+                                text-to-speech, code generation, and document parsing inside Streamlit.</p>
+                            <div class="p-tags"><span class="t-tag">Streamlit</span><span
+                                    class="t-tag">OpenAI</span><span class="t-tag">TTS</span></div>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="card-inner">
+                            <div class="p-header">
+                                <i class="fa-solid fa-file-excel p-icon"></i>
+                                <h4>Agentic PDF Extractor</h4>
+                            </div>
+                            <p class="p-desc">A pipeline that extracts key billing metrics from irregular invoice PDF
+                                documents and compiles clean, schema-validated Excel sheets.</p>
+                            <div class="p-tags"><span class="t-tag">LLM Parsing</span><span class="t-tag">Excel</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="card-inner">
+                            <div class="p-header">
+                                <i class="fa-solid fa-palette p-icon"></i>
+                                <h4>AI Brand Studio</h4>
+                            </div>
+                            <p class="p-desc">Uses generative models to automatically synthesize brand assets, domain
+                                listings, logo marks, copy variants, and landing copy.</p>
+                            <div class="p-tags"><span class="t-tag">Diffusers</span><span
+                                    class="t-tag">PromptFlow</span></div>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="card-inner">
+                            <div class="p-header">
+                                <i class="fa-solid fa-chart-column p-icon"></i>
+                                <h4>AI Data Analyst</h4>
+                            </div>
+                            <p class="p-desc">An autonomous analyst that inspects custom tabular datasets, detects
+                                patterns, generates charts, and writes statistical summaries.</p>
+                            <div class="p-tags"><span class="t-tag">Pandas</span><span class="t-tag">Matplotlib</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="card-inner">
+                            <div class="p-header">
+                                <i class="fa-solid fa-calculator p-icon"></i>
+                                <h4>MathGPT</h4>
+                            </div>
+                            <p class="p-desc">A mathematical assistant converting language questions into verified
+                                algebraic formulas and answers via Gemma 2 and LLMMathChain.</p>
+                            <div class="p-tags"><span class="t-tag">Gemma 2</span><span class="t-tag">LangChain</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="card-inner">
+                            <div class="p-header">
+                                <i class="fa-solid fa-gears p-icon"></i>
+                                <h4>N8N Workflows</h4>
+                            </div>
+                            <p class="p-desc">Engineered multiple production-grade automation loops connecting
+                                third-party webhooks, databases, APIs, and reasoning nodes.</p>
+                            <div class="p-tags"><span class="t-tag">n8n</span><span class="t-tag">Automation</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT SECTION -->
+        <section class="scroll-section" id="contact">
+            <div class="section-container">
+                <div class="section-header-wrap">
+                    <h2 class="section-heading"><span class="accent-mark">✦</span> Get In Touch</h2>
+                    <div class="section-line"></div>
+                </div>
+
+                <div class="contact-wrapper-card">
+                    <p class="contact-intro">Let's discuss how I can help you automate systems, deploy agents, and
+                        optimize reasoning models.</p>
+
+                    <form class="contact-form" id="contactForm"
+                        onsubmit="event.preventDefault(); alert('Message sent! Connection initialized.');">
+                        <div class="form-row-split">
+                            <div class="form-control">
+                                <label for="cName">Your Name</label>
+                                <input type="text" id="cName" placeholder="Full Name" required>
+                            </div>
+                            <div class="form-control">
+                                <label for="cEmail">Email Address</label>
+                                <input type="email" id="cEmail" placeholder="email@example.com" required>
+                            </div>
+                        </div>
+                        <div class="form-control">
+                            <label for="cMsg">Project Brief / Message</label>
+                            <textarea id="cMsg" rows="5"
+                                placeholder="Define requirements, project scope, or inquiry details..."
+                                required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">
+                            <span class="btn-glow-layer"></span>
+                            <span class="btn-label-text">Transmit Message</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="main-footer">
+        <p>&copy; 2026 Shailove Singh. All rights reserved.</p>
+        <p class="footer-badge">✦ Generative & Agentic AI Specialist ✦</p>
+    </footer>
+
+    <!-- App Logic -->
+    <script src="app.js"></script>
+</body>
+
+</html>
