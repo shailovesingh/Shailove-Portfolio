@@ -1,16 +1,31 @@
 /* ==========================================
-   AESTHETIC ANIME PROFESSIONAL PORTFOLIO JS
+   AESTHETIC PORTFOLIO JS - ENHANCED UX & PARTICLES
    ========================================== */
 
-// 1. DREAMSCAPE PARTICLES (Cherry Blossom Petals & Glowing Embers)
+// 1. DYNAMIC INTERACTIVE PARTICLES (Dreamscape Engine with Mouse Physics)
 class DreamscapeEngine {
     constructor() {
         this.canvas = document.getElementById('dreamscapeCanvas');
         this.ctx = this.canvas.getContext('2d');
         this.particles = [];
-        this.resize();
+        this.mouseX = null;
+        this.mouseY = null;
+        this.mouseRadius = 140; // Area of effect
         
+        this.resize();
         window.addEventListener('resize', () => this.resize());
+        
+        // Mouse movement tracking
+        window.addEventListener('mousemove', (e) => {
+            this.mouseX = e.clientX;
+            this.mouseY = e.clientY;
+        });
+
+        // Mouse leave tracking
+        window.addEventListener('mouseleave', () => {
+            this.mouseX = null;
+            this.mouseY = null;
+        });
     }
 
     resize() {
@@ -19,9 +34,8 @@ class DreamscapeEngine {
     }
 
     createParticle(initRandomY = false) {
-        const isPetal = Math.random() < 0.4; // 40% cherry blossom petals, 60% glowing embers
+        const isPetal = Math.random() < 0.35; // 35% cherry blossom petals, 65% glowing embers
         const x = Math.random() * this.canvas.width;
-        // Start from top or random Y for initialization
         const y = initRandomY ? Math.random() * this.canvas.height : -10;
         
         if (isPetal) {
@@ -29,44 +43,62 @@ class DreamscapeEngine {
             this.particles.push({
                 type: 'petal',
                 x, y,
-                size: Math.random() * 6 + 4,
-                speedY: Math.random() * 1.0 + 0.6,
-                speedX: -(Math.random() * 1.2 + 0.4), // Drift left
+                size: Math.random() * 5 + 3,
+                speedY: Math.random() * 0.8 + 0.5,
+                speedX: -(Math.random() * 1.0 + 0.3), // Drift left
                 angle: Math.random() * Math.PI * 2,
-                spinSpeed: (Math.random() - 0.5) * 0.02,
-                opacity: Math.random() * 0.4 + 0.3,
-                color: `rgba(255, ${Math.floor(Math.random() * 40 + 130)}, ${Math.floor(Math.random() * 30 + 170)}, 1)` // Soft pinks
+                spinSpeed: (Math.random() - 0.5) * 0.015,
+                opacity: Math.random() * 0.35 + 0.2,
+                color: `rgba(255, ${Math.floor(Math.random() * 30 + 140)}, ${Math.floor(Math.random() * 20 + 180)}, 1)`
             });
         } else {
-            // Soft Glowing Embers
+            // Soft Glowing Embers (More reactive to mouse physics)
             this.particles.push({
                 type: 'ember',
                 x, y: initRandomY ? Math.random() * this.canvas.height : this.canvas.height + 10,
                 size: Math.random() * 2 + 1,
-                speedY: -(Math.random() * 0.8 + 0.2), // Float up
-                speedX: (Math.random() - 0.5) * 0.4,
-                opacity: Math.random() * 0.5 + 0.2,
-                fadeSpeed: Math.random() * 0.003 + 0.001,
-                color: Math.random() < 0.5 ? '#ff7bb5' : '#e6c8ff'
+                speedY: -(Math.random() * 0.6 + 0.2), // Float up
+                speedX: (Math.random() - 0.5) * 0.3,
+                opacity: Math.random() * 0.6 + 0.2,
+                fadeSpeed: Math.random() * 0.0025 + 0.0008,
+                color: Math.random() < 0.5 ? '#ff7bb5' : '#00f0ff' // Pink & Cyan mix
             });
         }
     }
 
     update() {
         // Maintain particle count limit
-        if (this.particles.length < 50 && Math.random() < 0.15) {
+        if (this.particles.length < 60 && Math.random() < 0.18) {
             this.createParticle();
         }
 
         for (let i = 0; i < this.particles.length; i++) {
             const p = this.particles[i];
 
+            // 1. Apply Mouse Repulsion Force
+            if (this.mouseX !== null && this.mouseY !== null) {
+                const dx = p.x - this.mouseX;
+                const dy = p.y - this.mouseY;
+                const dist = Math.sqrt(dx * dx + dy * dy);
+
+                if (dist < this.mouseRadius) {
+                    const force = (this.mouseRadius - dist) / this.mouseRadius;
+                    // Push particles away proportional to proximity
+                    const pushX = (dx / dist) * force * 2.5;
+                    const pushY = (dy / dist) * force * 2.5;
+
+                    p.x += pushX;
+                    p.y += pushY;
+                }
+            }
+
+            // 2. Standard Drift
             if (p.type === 'petal') {
                 p.y += p.speedY;
                 p.x += p.speedX;
                 p.angle += p.spinSpeed;
                 
-                // If out of bounds, delete
+                // Boundaries reset
                 if (p.y > this.canvas.height + 10 || p.x < -10) {
                     this.particles.splice(i, 1);
                     i--;
@@ -76,8 +108,8 @@ class DreamscapeEngine {
                 p.x += p.speedX;
                 p.opacity -= p.fadeSpeed;
                 
-                // If out of life or bounds, delete
-                if (p.opacity <= 0 || p.y < -10) {
+                // Boundaries/Life reset
+                if (p.opacity <= 0 || p.y < -10 || p.x < -10 || p.x > this.canvas.width + 10) {
                     this.particles.splice(i, 1);
                     i--;
                 }
@@ -96,7 +128,6 @@ class DreamscapeEngine {
                 this.ctx.translate(p.x, p.y);
                 this.ctx.rotate(p.angle);
                 
-                // Draw delicate petal shape (ellipse/oval)
                 this.ctx.fillStyle = p.color;
                 this.ctx.globalAlpha = p.opacity;
                 this.ctx.beginPath();
@@ -105,10 +136,10 @@ class DreamscapeEngine {
                 
                 this.ctx.restore();
             } else {
-                // Draw glowing ember
+                // Embers with premium glow shadows
                 this.ctx.fillStyle = p.color;
                 this.ctx.globalAlpha = p.opacity;
-                this.ctx.shadowBlur = p.size * 4;
+                this.ctx.shadowBlur = p.size * 5;
                 this.ctx.shadowColor = p.color;
                 
                 this.ctx.beginPath();
@@ -129,14 +160,13 @@ class DreamscapeEngine {
     }
 
     initSparks() {
-        // Generate initial batch of particles throughout the screen
-        for (let i = 0; i < 30; i++) {
+        for (let i = 0; i < 40; i++) {
             this.createParticle(true);
         }
     }
 }
 
-// 2. NAV BAR & SCROLL ANIMATIONS
+// 2. NAV BAR, SCROLL SPY, & STAGGERED SCROLL REVEALS
 class PortfolioManager {
     constructor() {
         this.navbar = document.getElementById('navbar');
@@ -145,19 +175,19 @@ class PortfolioManager {
         this.navLinks = document.querySelectorAll('.nav-link');
         this.scrollSections = document.querySelectorAll('.scroll-section, .hero-section');
 
-
         this.init();
     }
 
     init() {
         this.bindEvents();
         this.setupScrollSpy();
+        this.setupScrollReveal();
     }
 
     bindEvents() {
-        // Navbar scroll effect
+        // Floating Navbar scroll indicator styling
         window.addEventListener('scroll', () => {
-            if (window.scrollY > 50) {
+            if (window.scrollY > 40) {
                 this.navbar.classList.add('scrolled');
             } else {
                 this.navbar.classList.remove('scrolled');
@@ -183,12 +213,11 @@ class PortfolioManager {
                 this.mobileToggle.querySelector('i').className = 'fa-solid fa-bars';
             });
         });
-
     }
 
-    // Highlights navigation link matching the section in viewport
+    // Scroll Spy active navigation state
     setupScrollSpy() {
-        let fromTop = window.scrollY + 100;
+        let fromTop = window.scrollY + 120;
 
         this.scrollSections.forEach(section => {
             if (
@@ -206,9 +235,30 @@ class PortfolioManager {
             }
         });
     }
+
+    // High performance IntersectionObserver for staggered reveals
+    setupScrollReveal() {
+        const revealOptions = {
+            threshold: 0.08,
+            rootMargin: '0px 0px -40px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('revealed');
+                    // Stop observing once revealed to maintain animations
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, revealOptions);
+
+        const revealElements = document.querySelectorAll('.scroll-reveal');
+        revealElements.forEach(el => observer.observe(el));
+    }
 }
 
-// 3. LAUNCH ENGINES
+// 3. INITIALIZATION
 document.addEventListener('DOMContentLoaded', () => {
     // Start canvas particles
     const dreamscape = new DreamscapeEngine();
