@@ -4,494 +4,465 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shailove Singh | Generative & Agentic AI Architect</title>
+    <title>Shailove Singh — Generative &amp; Agentic AI Engineer</title>
     <meta name="description"
-        content="Professional portfolio of Shailove Singh, Generative and Agentic AI Developer. Dynamic AI workflows, RAG systems, and multi-agent orchestration.">
-    <!-- Google Fonts -->
+        content="Shailove Singh — Generative & Agentic AI Engineer. I design multi-agent systems, RAG pipelines, and production-grade LLM workflows.">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&family=Orbitron:wght@500;700;900&family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
         rel="stylesheet">
-    <!-- FontAwesome for Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- CSS Stylesheet -->
+
     <link rel="stylesheet" href="style.css">
+    <noscript>
+        <style>.reveal { opacity: 1 !important; transform: none !important; }</style>
+    </noscript>
 </head>
 
 <body>
 
-    <!-- Soft Dreamscape Particles Background Canvas -->
-    <canvas id="dreamscapeCanvas"></canvas>
-
-    <!-- HEADER NAVIGATION BAR -->
-    <header class="navbar" id="navbar">
-        <div class="nav-container">
-            <a href="#hero" class="nav-logo">
-                <span class="logo-accent">✦</span> SHAILOVE SINGH
+    <!-- ───────────────  NAVBAR  ─────────────── -->
+    <header class="nav" id="nav">
+        <div class="wrap nav__inner">
+            <a href="#top" class="brand">
+                <span class="brand__mark"></span>
+                Shailove&nbsp;Singh
             </a>
 
-            <!-- Mobile Toggle -->
-            <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Navigation Menu">
-                <i class="fa-solid fa-bars"></i>
-            </button>
-
-            <nav class="nav-menu" id="navMenu">
-                <a href="#about" class="nav-link">About</a>
-                <a href="#skills" class="nav-link">Skills</a>
-                <a href="#experience" class="nav-link">Experience</a>
-                <a href="#projects" class="nav-link">Projects</a>
-                <a href="#contact" class="nav-link">Contact</a>
+            <nav class="nav__links" id="navLinks">
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#experience">Experience</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact" class="nav__cta">Contact</a>
             </nav>
+
+            <button class="nav__toggle" id="navToggle" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
         </div>
     </header>
 
-    <!-- HERO / LANDING SECTION -->
-    <section class="hero-section" id="hero">
-        <video class="hero-bg-video" autoplay loop muted playsinline poster="anime_background.png">
-            <source src="Create_a_smooth_cinematic_anim.mp4" type="video/mp4">
-        </video>
-        <div class="hero-bg-overlay"></div>
-        <div class="hero-content">
-            <h1 class="hero-title" data-text="BUILDING BEYOND ORDINARY">BUILDING BEYOND ORDINARY</h1>
-            <p class="hero-subtitle">Generative & Agentic AI Specialist</p>
-            <p class="hero-tagline">Architecting intelligent multi-agent systems and production-grade LLM workflows.</p>
-            <a href="#projects" class="hero-cta-btn">
-                <span class="btn-glow-layer"></span>
-                <span class="btn-label-text">Explore Showcase <i class="fa-solid fa-arrow-down"></i></span>
-            </a>
+    <!-- ───────────────  HERO  ─────────────── -->
+    <section class="hero" id="top">
+        <div class="hero__grid" aria-hidden="true"></div>
+        <div class="hero__glow hero__glow--a" aria-hidden="true"></div>
+        <div class="hero__glow hero__glow--b" aria-hidden="true"></div>
+
+        <div class="wrap hero__inner">
+            <p class="hero__eyebrow reveal">
+                <span class="dot"></span> Generative &amp; Agentic AI Engineer
+            </p>
+            <h1 class="hero__title reveal">
+                Building intelligent systems<br>
+                <span class="grad">that think, plan&nbsp;&amp;&nbsp;act.</span>
+            </h1>
+            <p class="hero__lede reveal">
+                I architect multi-agent workflows, RAG pipelines, and production-grade
+                LLM applications — turning foundation models into reliable, scalable products.
+            </p>
+            <div class="hero__actions reveal">
+                <a href="#projects" class="btn btn--primary">View my work</a>
+                <a href="#contact" class="btn btn--ghost">Get in touch</a>
+            </div>
+
+            <div class="hero__meta reveal">
+                <div class="hero__stat">
+                    <strong>3+ yrs</strong>
+                    <span>AI / ML engineering</span>
+                </div>
+                <div class="hero__stat">
+                    <strong>15+</strong>
+                    <span>Agentic &amp; LLM projects</span>
+                </div>
+                <div class="hero__stat">
+                    <strong>5</strong>
+                    <span>Industry roles</span>
+                </div>
+            </div>
         </div>
-        <div class="scroll-indicator">
-            <span class="mouse-icon"><span class="mouse-wheel"></span></span>
-            <span class="scroll-text">SCROLL TO ORCHESTRATE</span>
-        </div>
+
+        <a href="#about" class="hero__scroll" aria-label="Scroll down">
+            <span class="hero__mouse"><span></span></span>
+            <span>Scroll</span>
+        </a>
     </section>
 
-    <!-- MAIN WRAPPER FOR SCROLL SECTIONS -->
-    <div class="content-wrapper">
+    <main>
 
-        <!-- ABOUT SECTION -->
-        <section class="scroll-section" id="about">
-            <div class="section-container">
-                <div class="section-header-wrap scroll-reveal">
-                    <h2 class="section-heading"><span class="accent-mark">✦</span> Professional Profile</h2>
-                    <div class="section-line"></div>
-                </div>
+        <!-- ───────────────  ABOUT  ─────────────── -->
+        <section class="section" id="about">
+            <div class="wrap">
+                <header class="sec-head reveal">
+                    <span class="sec-num">01</span>
+                    <h2>About</h2>
+                    <span class="sec-rule"></span>
+                </header>
 
-                <div class="about-grid">
-                    <!-- Profile Card -->
-                    <div class="about-card-left scroll-reveal">
-                        <div class="portrait-container">
-                            <video src="86535a482a542fffb52d4e0e9c5e03f0_720w.mp4" class="profile-portrait" autoplay
-                                loop muted playsinline></video>
-                            <div class="portrait-glow"></div>
+                <div class="about">
+                    <aside class="about__card reveal">
+                        <div class="portrait">
+                            <img src="ai_architect_portrait.png" alt="Shailove Singh" loading="lazy">
+                            <span class="portrait__ring" aria-hidden="true"></span>
                         </div>
-                        <div class="quick-details">
-                            <div class="detail-item">
-                                <span class="detail-lbl">Clearance</span>
-                                <span class="detail-val highlight">AI Systems Architect</span>
+                        <dl class="facts">
+                            <div>
+                                <dt>Role</dt>
+                                <dd class="hl">AI Systems Engineer</dd>
                             </div>
-                            <div class="detail-item">
-                                <span class="detail-lbl">Academic</span>
-                                <span class="detail-val">BSc, SDS University</span>
+                            <div>
+                                <dt>Education</dt>
+                                <dd>BSc — SDS University</dd>
                             </div>
-                        </div>
-                    </div>
+                            <div>
+                                <dt>Based in</dt>
+                                <dd>India · Remote-friendly</dd>
+                            </div>
+                        </dl>
+                    </aside>
 
-                    <!-- Profile Bio -->
-                    <div class="about-card-right scroll-reveal">
-                        <h3 class="bio-subtitle">> Core AI Directive</h3>
-                        <p class="bio-text">
-                            Experienced Generative and Agentic AI developer skilled in building intelligent LLM-powered
-                            systems, multi-agent workflows, and autonomous AI solutions. I bridge the gap between
-                            foundation models and scalable business pipelines by designing secure, deterministic
-                            orchestrators.
+                    <div class="about__body reveal">
+                        <p class="about__lead">
+                            I bridge the gap between foundation models and real business pipelines.
+                        </p>
+                        <p>
+                            I'm a Generative &amp; Agentic AI engineer focused on building intelligent,
+                            LLM-powered systems — multi-agent workflows, retrieval-augmented generation,
+                            and autonomous solutions that hold up in production. My work centers on
+                            designing secure, deterministic orchestration around inherently probabilistic models.
                         </p>
 
-                        <div class="hud-divider"></div>
-
-                        <div class="contact-card-grid">
-                            <div class="contact-card-item">
-                                <i class="fa-solid fa-envelope contact-item-icon"></i>
-                                <div class="contact-item-info">
-                                    <span class="item-lbl">Communications</span>
-                                    <span class="item-val">shailovesingh787@gmail.com</span>
-                                </div>
-                            </div>
-                            <div class="contact-card-item">
-                                <i class="fa-solid fa-phone contact-item-icon"></i>
-                                <div class="contact-item-info">
-                                    <span class="item-lbl">Direct Uplink</span>
-                                    <span class="item-val">+91 6264381091</span>
-                                </div>
-                            </div>
+                        <div class="contact-mini">
+                            <a href="mailto:shailovesingh787@gmail.com" class="contact-mini__item">
+                                <span class="ic" aria-hidden="true">@</span>
+                                <span>
+                                    <small>Email</small>
+                                    shailovesingh787@gmail.com
+                                </span>
+                            </a>
+                            <a href="tel:+916264381091" class="contact-mini__item">
+                                <span class="ic" aria-hidden="true">☎</span>
+                                <span>
+                                    <small>Phone</small>
+                                    +91 62643 81091
+                                </span>
+                            </a>
                         </div>
 
-                        <div class="about-socials">
+                        <div class="socials">
                             <a href="https://www.linkedin.com/in/shailove-singh-04babb206" target="_blank"
-                                class="social-btn">
-                                <i class="fa-brands fa-linkedin-in"></i> LinkedIn Profile
-                            </a>
-                            <a href="https://github.com/shailovesingh" target="_blank" class="social-btn">
-                                <i class="fa-brands fa-github"></i> GitHub Repositories
-                            </a>
+                                rel="noopener" class="btn btn--sm">LinkedIn ↗</a>
+                            <a href="https://github.com/shailovesingh" target="_blank" rel="noopener"
+                                class="btn btn--sm btn--ghost">GitHub ↗</a>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- SKILLS SECTION -->
-        <section class="scroll-section" id="skills">
-            <div class="section-container">
-                <div class="section-header-wrap scroll-reveal">
-                    <h2 class="section-heading"><span class="accent-mark">✦</span> Technical Expertise</h2>
-                    <div class="section-line"></div>
-                </div>
+        <!-- ───────────────  SKILLS  ─────────────── -->
+        <section class="section section--alt" id="skills">
+            <div class="wrap">
+                <header class="sec-head reveal">
+                    <span class="sec-num">02</span>
+                    <h2>Skills</h2>
+                    <span class="sec-rule"></span>
+                </header>
 
-                <div class="skills-grid stagger-parent">
+                <div class="skills">
+                    <article class="skill-card reveal">
+                        <div class="skill-card__top">
+                            <span class="skill-card__idx">/ 01</span>
+                            <h3>Generative &amp; Agentic AI</h3>
+                        </div>
+                        <ul class="chips">
+                            <li>LangChain</li>
+                            <li>LangGraph</li>
+                            <li>AutoGen</li>
+                            <li>CrewAI</li>
+                            <li>OpenAI Agents SDK</li>
+                            <li>Prompt Engineering</li>
+                            <li>Fine-Tuning</li>
+                            <li>RAG Systems</li>
+                            <li>Vector Embeddings</li>
+                            <li>Semantic Search</li>
+                            <li>Multi-Agent Systems</li>
+                            <li>n8n Automation</li>
+                        </ul>
+                    </article>
 
-                    <!-- Skill Column 1: Gen AI -->
-                    <div class="skill-category-card scroll-reveal">
-                        <div class="category-header">
-                            <i class="fa-solid fa-wand-magic-sparkles category-icon"></i>
-                            <h3>Generative AI & Agentic Orchestration</h3>
+                    <article class="skill-card reveal">
+                        <div class="skill-card__top">
+                            <span class="skill-card__idx">/ 02</span>
+                            <h3>Programming &amp; ML</h3>
                         </div>
-                        <div class="skill-tags-group">
-                            <span class="skill-chip">LangChain</span>
-                            <span class="skill-chip">LangGraph</span>
-                            <span class="skill-chip">Microsoft AutoGen</span>
-                            <span class="skill-chip">CrewAI</span>
-                            <span class="skill-chip">OpenAI Agents SDK</span>
-                            <span class="skill-chip">Prompt Engineering</span>
-                            <span class="skill-chip">Fine-Tuning</span>
-                            <span class="skill-chip">RAG Systems</span>
-                            <span class="skill-chip">Vector Embeddings</span>
-                            <span class="skill-chip">Semantic Search</span>
-                            <span class="skill-chip">Multi-Agent Systems</span>
-                            <span class="skill-chip">n8n Automation</span>
-                            <span class="skill-chip">Orchestrated Workflows</span>
-                            <span class="skill-chip">API & Data Automation</span>
-                        </div>
-                    </div>
+                        <ul class="chips">
+                            <li>Python</li>
+                            <li>TensorFlow</li>
+                            <li>PyTorch</li>
+                            <li>Flask</li>
+                            <li>MLflow</li>
+                            <li>DVC</li>
+                            <li>DagsHub</li>
+                        </ul>
+                    </article>
 
-                    <!-- Skill Column 2: Programming & ML -->
-                    <div class="skill-category-card scroll-reveal">
-                        <div class="category-header">
-                            <i class="fa-solid fa-code category-icon"></i>
-                            <h3>Programming & Machine Learning</h3>
+                    <article class="skill-card reveal">
+                        <div class="skill-card__top">
+                            <span class="skill-card__idx">/ 03</span>
+                            <h3>Cloud, Data &amp; DevOps</h3>
                         </div>
-                        <div class="skill-tags-group">
-                            <span class="skill-chip">Python</span>
-                            <span class="skill-chip">TensorFlow</span>
-                            <span class="skill-chip">PyTorch</span>
-                            <span class="skill-chip">Flask</span>
-                            <span class="skill-chip">MLflow</span>
-                            <span class="skill-chip">DVC</span>
-                            <span class="skill-chip">DagsHub</span>
-                        </div>
-                    </div>
-
-                    <!-- Skill Column 3: Cloud & Databases -->
-                    <div class="skill-category-card scroll-reveal">
-                        <div class="category-header">
-                            <i class="fa-solid fa-server category-icon"></i>
-                            <h3>Cloud Platforms, DBs & DevOps</h3>
-                        </div>
-                        <div class="skill-tags-group">
-                            <span class="skill-chip">AWS (SageMaker, Lambda)</span>
-                            <span class="skill-chip">Azure ML</span>
-                            <span class="skill-chip">GCP</span>
-                            <span class="skill-chip">FAISS</span>
-                            <span class="skill-chip">Pinecone</span>
-                            <span class="skill-chip">Relational Databases</span>
-                            <span class="skill-chip">Dynamics 365</span>
-                            <span class="skill-chip">GitHub Actions</span>
-                            <span class="skill-chip">Git</span>
-                        </div>
-                    </div>
-
+                        <ul class="chips">
+                            <li>AWS (SageMaker, Lambda)</li>
+                            <li>Azure ML</li>
+                            <li>GCP</li>
+                            <li>FAISS</li>
+                            <li>Pinecone</li>
+                            <li>SQL Databases</li>
+                            <li>Dynamics 365</li>
+                            <li>GitHub Actions</li>
+                            <li>Git</li>
+                        </ul>
+                    </article>
                 </div>
             </div>
-        </sect        <!-- EXPERIENCE SECTION -->
-        <section class="scroll-section" id="experience">
-            <div class="section-container">
-                <div class="section-header-wrap scroll-reveal">
-                    <h2 class="section-heading"><span class="accent-mark">✦</span> Professional History</h2>
-                    <div class="section-line"></div>
-                </div>
+        </section>
 
-                <div class="experience-timeline stagger-parent">
+        <!-- ───────────────  EXPERIENCE  ─────────────── -->
+        <section class="section" id="experience">
+            <div class="wrap">
+                <header class="sec-head reveal">
+                    <span class="sec-num">03</span>
+                    <h2>Experience</h2>
+                    <span class="sec-rule"></span>
+                </header>
 
-                    <!-- Exp 1 -->
-                    <div class="timeline-item scroll-reveal">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-content">
-                            <div class="timeline-header">
-                                <h3 class="role-title">Data Scientist</h3>
-                                <span class="date-badge">Oct 2024 - Jan 2026</span>
+                <ol class="timeline">
+                    <li class="tl reveal">
+                        <span class="tl__dot"></span>
+                        <div class="tl__card">
+                            <div class="tl__head">
+                                <h3>Data Scientist</h3>
+                                <span class="tl__date">Oct 2024 — Jan 2026</span>
                             </div>
-                            <h4 class="company-name">Qonaq Health and Wellness <span class="location-txt">| New
-                                     Delhi</span></h4>
-                            <ul class="timeline-bullets">
-                                <li>Engineered an LLM-driven recommendation engine using patient medical charts and
-                                    clinical rulesets to produce personalized medical-tourism care itineraries.</li>
-                                <li>Leveraged language models to translate, parse, and summarize patient files,
-                                    enhancing cross-border clinical workflow execution.</li>
-                                <li>Mapped trends in recovery timelines using demographics and post-op care logs to
-                                    refine therapeutic recommendation algorithms.</li>
+                            <p class="tl__org">Qonaq Health and Wellness <span>· New Delhi</span></p>
+                            <ul>
+                                <li>Engineered an LLM-driven recommendation engine using patient medical
+                                    charts and clinical rulesets to produce personalized medical-tourism care itineraries.</li>
+                                <li>Used language models to translate, parse, and summarize patient files,
+                                    streamlining cross-border clinical workflows.</li>
+                                <li>Mapped recovery-timeline trends from demographics and post-op care logs
+                                    to refine recommendation algorithms.</li>
                             </ul>
                         </div>
-                    </div>
+                    </li>
 
-                    <!-- Exp 2 -->
-                    <div class="timeline-item scroll-reveal">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-content">
-                            <div class="timeline-header">
-                                <h3 class="role-title">Prompt Engineer</h3>
-                                <span class="date-badge">Jan 2025 - Mar 2025</span>
+                    <li class="tl reveal">
+                        <span class="tl__dot"></span>
+                        <div class="tl__card">
+                            <div class="tl__head">
+                                <h3>Prompt Engineer</h3>
+                                <span class="tl__date">Jan 2025 — Mar 2025</span>
                             </div>
-                            <h4 class="company-name">Soul AI <span class="location-txt">| Freelance</span></h4>
-                            <ul class="timeline-bullets">
-                                <li>Formulated and validated structured instructions for core LLMs, improving prompt
+                            <p class="tl__org">Soul AI <span>· Freelance</span></p>
+                            <ul>
+                                <li>Designed and validated structured instructions for core LLMs, improving
                                     factual accuracy, reasoning, and context adaptation.</li>
-                                <li>Supervised dataset validation routines, tuning response parameters to prevent system
+                                <li>Ran dataset validation routines, tuning response parameters to reduce
                                     drift and hallucination.</li>
-                                <li>Constructed template prompt sets for code compilation, text parsing, and domain QA
-                                    pipelines.</li>
+                                <li>Built reusable prompt templates for code generation, text parsing, and domain QA.</li>
                             </ul>
                         </div>
-                    </div>
+                    </li>
 
-                    <!-- Exp 3 -->
-                    <div class="timeline-item scroll-reveal">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-content">
-                            <div class="timeline-header">
-                                <h3 class="role-title">Data Scientist</h3>
-                                <span class="date-badge">Jan 2024 - Oct 2024</span>
+                    <li class="tl reveal">
+                        <span class="tl__dot"></span>
+                        <div class="tl__card">
+                            <div class="tl__head">
+                                <h3>Data Scientist</h3>
+                                <span class="tl__date">Jan 2024 — Oct 2024</span>
                             </div>
-                            <h4 class="company-name">Fill Design Group <span class="location-txt">| Kolkata, WB</span>
-                            </h4>
-                            <ul class="timeline-bullets">
-                                <li>Developed a conversational agent for **Dakshita’s Kitchen** in real-time,
-                                    simplifying food restocking, inventory cataloging, and recipe curation.</li>
-                                <li>Created an adaptive inventory replacement engine by analyzing historic sales loops,
-                                    lowering material waste margins by 18%.</li>
-                                <li>Deployed LLM marketing copy pipelines and programmatic ad-bidding optimizations for
-                                    retail clients in the United States.</li>
+                            <p class="tl__org">Fill Design Group <span>· Kolkata, WB</span></p>
+                            <ul>
+                                <li>Built a real-time conversational agent for Dakshita's Kitchen, simplifying
+                                    restocking, inventory cataloging, and recipe curation.</li>
+                                <li>Created an adaptive inventory engine from historic sales loops, lowering
+                                    material waste by 18%.</li>
+                                <li>Deployed LLM marketing-copy pipelines and ad-bidding optimizations for US retail clients.</li>
                             </ul>
                         </div>
-                    </div>
+                    </li>
 
-                    <!-- Exp 4 -->
-                    <div class="timeline-item scroll-reveal">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-content">
-                            <div class="timeline-header">
-                                <h3 class="role-title">Data Analyst</h3>
-                                <span class="date-badge">Mar 2023 - Jan 2024</span>
+                    <li class="tl reveal">
+                        <span class="tl__dot"></span>
+                        <div class="tl__card">
+                            <div class="tl__head">
+                                <h3>Data Analyst</h3>
+                                <span class="tl__date">Mar 2023 — Jan 2024</span>
                             </div>
-                            <h4 class="company-name">Contechub <span class="location-txt">| Jaipur, RJ</span></h4>
-                            <ul class="timeline-bullets">
-                                <li>Synthesized analytics dashboards covering ad campaigns, web visitor trends, and
-                                    conversions.</li>
-                                <li>Isolated underperforming bottlenecks in client customer Acquisition cycles,
-                                    increasing performance ROI by 12%.</li>
+                            <p class="tl__org">Contechub <span>· Jaipur, RJ</span></p>
+                            <ul>
+                                <li>Built analytics dashboards covering ad campaigns, web traffic, and conversions.</li>
+                                <li>Isolated bottlenecks in customer-acquisition cycles, increasing ROI by 12%.</li>
                             </ul>
                         </div>
-                    </div>
+                    </li>
 
-                    <!-- Exp 5 -->
-                    <div class="timeline-item scroll-reveal">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-content">
-                            <div class="timeline-header">
-                                <h3 class="role-title">Apprentice</h3>
-                                <span class="date-badge">Oct 2022 - Mar 2023</span>
+                    <li class="tl reveal">
+                        <span class="tl__dot"></span>
+                        <div class="tl__card">
+                            <div class="tl__head">
+                                <h3>Apprentice</h3>
+                                <span class="tl__date">Oct 2022 — Mar 2023</span>
                             </div>
-                            <h4 class="company-name">GE Aerospace <span class="location-txt">| Pune, MH</span></h4>
-                            <ul class="timeline-bullets">
-                                <li>Traced turboprop and engine asset lifecycles across Material Review Board tracks
-                                    using Oracle enterprise resources.</li>
-                                <li>Evaluated raw scrap stats, recommending structural shop floor changes that reduced
-                                    metal machining waste.</li>
+                            <p class="tl__org">GE Aerospace <span>· Pune, MH</span></p>
+                            <ul>
+                                <li>Traced engine asset lifecycles across Material Review Board tracks using Oracle ERP.</li>
+                                <li>Analyzed scrap stats and recommended shop-floor changes that reduced machining waste.</li>
                             </ul>
                         </div>
-                    </div>    </div>
+                    </li>
+                </ol>
+            </div>
+        </section>
 
+        <!-- ───────────────  PROJECTS  ─────────────── -->
+        <section class="section section--alt" id="projects">
+            <div class="wrap">
+                <header class="sec-head reveal">
+                    <span class="sec-num">04</span>
+                    <h2>Projects</h2>
+                    <span class="sec-rule"></span>
+                </header>
+
+                <div class="projects">
+                    <a href="https://github.com/shailovesingh/Agentic-Chatbot" target="_blank" rel="noopener" class="proj reveal">
+                        <span class="proj__num">001</span>
+                        <h3>Agentic Chatbot</h3>
+                        <p>A Python chatbot using multi-agent orchestration, tool/function-calling logic, and hybrid RAG retrieval.</p>
+                        <div class="proj__tags"><span>Python</span><span>LangGraph</span><span>RAG</span></div>
+                        <span class="proj__arrow">↗</span>
+                    </a>
+
+                    <a href="https://github.com/shailovesingh/Querygpt" target="_blank" rel="noopener" class="proj reveal">
+                        <span class="proj__num">002</span>
+                        <h3>QueryGPT</h3>
+                        <p>Natural-language-to-SQL platform letting non-technical users query databases via LangGraph agents.</p>
+                        <div class="proj__tags"><span>Groq API</span><span>SQL</span><span>LangGraph</span></div>
+                        <span class="proj__arrow">↗</span>
+                    </a>
+
+                    <a href="https://github.com/shailovesingh/Shailove-Ai" target="_blank" rel="noopener" class="proj reveal">
+                        <span class="proj__num">003</span>
+                        <h3>Shailove AI</h3>
+                        <p>An all-in-one multimodal assistant: RAG chat, image synthesis, TTS, code generation, and document parsing.</p>
+                        <div class="proj__tags"><span>Streamlit</span><span>OpenAI</span><span>TTS</span></div>
+                        <span class="proj__arrow">↗</span>
+                    </a>
+
+                    <a href="https://github.com/shailovesingh/Agentic-PDF-to-Excel-Data-Extractor" target="_blank" rel="noopener" class="proj reveal">
+                        <span class="proj__num">004</span>
+                        <h3>Agentic PDF Extractor</h3>
+                        <p>A pipeline that pulls billing metrics from irregular invoice PDFs into clean, schema-validated Excel.</p>
+                        <div class="proj__tags"><span>LLM Parsing</span><span>Excel</span></div>
+                        <span class="proj__arrow">↗</span>
+                    </a>
+
+                    <a href="https://github.com/shailovesingh" target="_blank" rel="noopener" class="proj reveal">
+                        <span class="proj__num">005</span>
+                        <h3>AI Brand Studio</h3>
+                        <p>Generative models that synthesize brand assets, domain listings, logo marks, and landing copy.</p>
+                        <div class="proj__tags"><span>Diffusers</span><span>PromptFlow</span></div>
+                        <span class="proj__arrow">↗</span>
+                    </a>
+
+                    <a href="https://github.com/shailovesingh/Agentic-Ai-Data-Analyst" target="_blank" rel="noopener" class="proj reveal">
+                        <span class="proj__num">006</span>
+                        <h3>AI Data Analyst</h3>
+                        <p>An autonomous analyst that inspects tabular datasets, detects patterns, charts results, and writes summaries.</p>
+                        <div class="proj__tags"><span>Pandas</span><span>Matplotlib</span></div>
+                        <span class="proj__arrow">↗</span>
+                    </a>
+
+                    <a href="https://github.com/shailovesingh/8-MathsGPT" target="_blank" rel="noopener" class="proj reveal">
+                        <span class="proj__num">007</span>
+                        <h3>MathGPT</h3>
+                        <p>A math assistant converting language questions into verified algebraic answers via Gemma 2 and LLMMathChain.</p>
+                        <div class="proj__tags"><span>Gemma 2</span><span>LangChain</span></div>
+                        <span class="proj__arrow">↗</span>
+                    </a>
+
+                    <a href="https://github.com/shailovesingh/N8N-workflow-templates" target="_blank" rel="noopener" class="proj reveal">
+                        <span class="proj__num">008</span>
+                        <h3>n8n Workflows</h3>
+                        <p>Production-grade automation loops connecting webhooks, databases, APIs, and reasoning nodes.</p>
+                        <div class="proj__tags"><span>n8n</span><span>Automation</span></div>
+                        <span class="proj__arrow">↗</span>
+                    </a>
                 </div>
             </div>
         </section>
 
-        <!-- PROJECTS SECTION -->
-        <section class="scroll-section" id="projects">
-            <div class="section-container">
-                <div class="section-header-wrap scroll-reveal">
-                    <h2 class="section-heading"><span class="accent-mark">✦</span> Project Showcase</h2>
-                    <div class="section-line"></div>
-                </div>
+        <!-- ───────────────  CONTACT  ─────────────── -->
+        <section class="section" id="contact">
+            <div class="wrap">
+                <header class="sec-head reveal">
+                    <span class="sec-num">05</span>
+                    <h2>Contact</h2>
+                    <span class="sec-rule"></span>
+                </header>
 
-                <!-- Projects Cards Grid -->
-                <div class="projects-grid stagger-parent">
-
-                    <div class="project-card scroll-reveal">
-                        <div class="card-inner">
-                            <div class="p-header">
-                                <i class="fa-solid fa-robot p-icon"></i>
-                                <h4>Agentic Chatbot</h4>
-                            </div>
-                            <p class="p-desc">Built a Python chatbot utilizing multi-agent orchestration frameworks,
-                                tool/function calling logic, and hybrid RAG data fetching.</p>
-                            <div class="p-tags"><span class="t-tag">Python</span><span
-                                    class="t-tag">LangGraph</span><span class="t-tag">RAG</span></div>
+                <div class="contact">
+                    <div class="contact__intro reveal">
+                        <h3>Let's build something intelligent.</h3>
+                        <p>Open to roles and collaborations in Generative &amp; Agentic AI. Tell me about your
+                            project and I'll get back to you.</p>
+                        <div class="contact__direct">
+                            <a href="mailto:shailovesingh787@gmail.com">shailovesingh787@gmail.com</a>
+                            <a href="tel:+916264381091">+91 62643 81091</a>
                         </div>
                     </div>
 
-                    <div class="project-card scroll-reveal">
-                        <div class="card-inner">
-                            <div class="p-header">
-                                <i class="fa-solid fa-database p-icon"></i>
-                                <h4>QueryGPT</h4>
-                            </div>
-                            <p class="p-desc">A natural language to SQL extraction platform enabling non-technical users
-                                to query database engines via LangGraph multi-agent systems.</p>
-                            <div class="p-tags"><span class="t-tag">Groq API</span><span class="t-tag">SQL</span><span
-                                    class="t-tag">LangGraph</span></div>
+                    <form class="contact__form reveal" id="contactForm">
+                        <div class="field-row">
+                            <label class="field">
+                                <span>Name</span>
+                                <input type="text" name="name" placeholder="Your name" required>
+                            </label>
+                            <label class="field">
+                                <span>Email</span>
+                                <input type="email" name="email" placeholder="you@example.com" required>
+                            </label>
                         </div>
-                    </div>
-
-                    <div class="project-card scroll-reveal">
-                        <div class="card-inner">
-                            <div class="p-header">
-                                <i class="fa-solid fa-sliders p-icon"></i>
-                                <h4>Shailove AI</h4>
-                            </div>
-                            <p class="p-desc">An all-in-one multimodal assistant integrating RAG Chat, image synthesis,
-                                text-to-speech, code generation, and document parsing inside Streamlit.</p>
-                            <div class="p-tags"><span class="t-tag">Streamlit</span><span
-                                    class="t-tag">OpenAI</span><span class="t-tag">TTS</span></div>
-                        </div>
-                    </div>
-
-                    <div class="project-card scroll-reveal">
-                        <div class="card-inner">
-                            <div class="p-header">
-                                <i class="fa-solid fa-file-excel p-icon"></i>
-                                <h4>Agentic PDF Extractor</h4>
-                            </div>
-                            <p class="p-desc">A pipeline that extracts key billing metrics from irregular invoice PDF
-                                documents and compiles clean, schema-validated Excel sheets.</p>
-                            <div class="p-tags"><span class="t-tag">LLM Parsing</span><span class="t-tag">Excel</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="project-card scroll-reveal">
-                        <div class="card-inner">
-                            <div class="p-header">
-                                <i class="fa-solid fa-palette p-icon"></i>
-                                <h4>AI Brand Studio</h4>
-                            </div>
-                            <p class="p-desc">Uses generative models to automatically synthesize brand assets, domain
-                                listings, logo marks, copy variants, and landing copy.</p>
-                            <div class="p-tags"><span class="t-tag">Diffusers</span><span
-                                    class="t-tag">PromptFlow</span></div>
-                        </div>
-                    </div>
-
-                    <div class="project-card scroll-reveal">
-                        <div class="card-inner">
-                            <div class="p-header">
-                                <i class="fa-solid fa-chart-column p-icon"></i>
-                                <h4>AI Data Analyst</h4>
-                            </div>
-                            <p class="p-desc">An autonomous analyst that inspects custom tabular datasets, detects
-                                patterns, generates charts, and writes statistical summaries.</p>
-                            <div class="p-tags"><span class="t-tag">Pandas</span><span class="t-tag">Matplotlib</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="project-card scroll-reveal">
-                        <div class="card-inner">
-                            <div class="p-header">
-                                <i class="fa-solid fa-calculator p-icon"></i>
-                                <h4>MathGPT</h4>
-                            </div>
-                            <p class="p-desc">A mathematical assistant converting language questions into verified
-                                algebraic formulas and answers via Gemma 2 and LLMMathChain.</p>
-                            <div class="p-tags"><span class="t-tag">Gemma 2</span><span class="t-tag">LangChain</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="project-card scroll-reveal">
-                        <div class="card-inner">
-                            <div class="p-header">
-                                <i class="fa-solid fa-gears p-icon"></i>
-                                <h4>N8N Workflows</h4>
-                            </div>
-                            <p class="p-desc">Engineered multiple production-grade automation loops connecting
-                                third-party webhooks, databases, APIs, and reasoning nodes.</p>
-                            <div class="p-tags"><span class="t-tag">n8n</span><span class="t-tag">Automation</span>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-        <!-- CONTACT SECTION -->
-        <section class="scroll-section" id="contact">
-            <div class="section-container">
-                <div class="section-header-wrap scroll-reveal">
-                    <h2 class="section-heading"><span class="accent-mark">✦</span> Get In Touch</h2>
-                    <div class="section-line"></div>
-                </div>
-
-                <div class="contact-wrapper-card scroll-reveal">
-                    <p class="contact-intro">Let's discuss how I can help you automate systems, deploy agents, and
-                        optimize reasoning models.</p>
-
-                    <form class="contact-form" id="contactForm"
-                        onsubmit="event.preventDefault(); alert('Message sent! Connection initialized.');">
-                        <div class="form-row-split">
-                            <div class="form-control">
-                                <label for="cName">Your Name</label>
-                                <input type="text" id="cName" placeholder="Full Name" required>
-                            </div>
-                            <div class="form-control">
-                                <label for="cEmail">Email Address</label>
-                                <input type="email" id="cEmail" placeholder="email@example.com" required>
-                            </div>
-                        </div>
-                        <div class="form-control">
-                            <label for="cMsg">Project Brief / Message</label>
-                            <textarea id="cMsg" rows="5"
-                                placeholder="Define requirements, project scope, or inquiry details..."
-                                required></textarea>
-                        </div>
-                        <button type="submit" class="submit-btn">
-                            <span class="btn-glow-layer"></span>
-                            <span class="btn-label-text">Transmit Message</span>
-                        </button>
+                        <label class="field">
+                            <span>Message</span>
+                            <textarea name="message" rows="5" placeholder="Project scope, role, or question…" required></textarea>
+                        </label>
+                        <button type="submit" class="btn btn--primary btn--full">Send message</button>
+                        <p class="form-note" id="formNote" hidden>Opening your email app…</p>
                     </form>
                 </div>
             </div>
         </section>
+    </main>
 
-    </div>
-
-    <!-- FOOTER -->
-    <footer class="main-footer">
-        <p>&copy; 2026 Shailove Singh. All rights reserved.</p>
-        <p class="footer-badge">✦ Generative & Agentic AI Specialist ✦</p>
+    <!-- ───────────────  FOOTER  ─────────────── -->
+    <footer class="footer">
+        <div class="wrap footer__inner">
+            <a href="#top" class="brand">
+                <span class="brand__mark"></span>
+                Shailove&nbsp;Singh
+            </a>
+            <p class="footer__copy">© 2026 Shailove Singh · Generative &amp; Agentic AI Engineer</p>
+            <div class="footer__links">
+                <a href="https://github.com/shailovesingh" target="_blank" rel="noopener">GitHub</a>
+                <a href="https://www.linkedin.com/in/shailove-singh-04babb206" target="_blank" rel="noopener">LinkedIn</a>
+                <a href="mailto:shailovesingh787@gmail.com">Email</a>
+            </div>
+        </div>
     </footer>
 
-    <!-- App Logic -->
     <script src="app.js"></script>
 </body>
 
